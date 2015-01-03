@@ -21,20 +21,24 @@ angular.module('workspaceApp')
                 console.log($scope.pictures);
             }).
             error(function() {
-                console.log('error');
+                $scope.alert(error);
+                $scope.searching = false;
+                $scope.done = false;
             });
         };
         
+        $scope.error = false;
         $scope.searching = false;
         $scope.done = false;
         $scope.tag = "";
         $scope.search = function(tag) {
-            console.log(tag);
+            $scope.done = false;
+            $scope.error = false;
             if($scope.instaSearch.$valid) {
                $scope.master= angular.copy(tag);
                $scope.tag="";
                $scope.searching = true;
                $scope.queries(tag);
             }
-         };
+        };
     });

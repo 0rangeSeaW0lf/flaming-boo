@@ -10,16 +10,23 @@
         <button type="submit" class="btn btn-default" ng-disabled="instaSearch.$invalid" >Submit</button>
       </form>
       <br /><br />
-      <div ng-if="searching">
-        <p>Searching Instagram tagged with "{{ master }}"</p>
+      <div class="alert alert-info" role="alert" ng-if="searching">
+        Searching Instagram tagged with <strong>"{{ master }}"</strong>
       </div>
-      <div ng-if="done">
-        <p>We found {{ pictures.length }} results for "{{ master }}"</p>
+      <div class="alert alert-success alert-dismissible" role="alert" ng-if="done">
+        <button type="button" class="close" ng-click="" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        We found <strong>{{ pictures.length }}</strong> results for <strong>"{{ master }}"</strong>
+      </div>
+      <div class="alert alert-danger alert-dismissible" role="alert" ng-if="error">
+        <button type="button" class="close" ng-click="" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </div>
       <div class="row">
         <div ng-repeat="picture in pictures">
-          <div class="col-xs-4">
-            <img ng-src="{{ picture.images.standard_resolution.url }}" class="img-responsice" height="100%" width="100%"></img>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <a href="{{ picture.link }}" target="_blank">
+              <img ng-src="{{ picture.images.standard_resolution.url }}" class="img-responsice" height="100%" width="100%"></img>
+            </a>
             <br /><br /><br />
           </div>
         </div>
