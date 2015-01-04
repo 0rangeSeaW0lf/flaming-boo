@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('workspaceApp') // <- Inject ['ngAnimate'] here instead of doint it in app.js'
+angular.module('workspaceApp')
     .controller('MainCtrl', function ($scope, $http) {
         $scope.queries = function(tag){
             var url = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent';
