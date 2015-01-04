@@ -7,25 +7,25 @@ body {
   min-height: 100vh;
 }
 
-.alert-dismissible.ng-enter {
-  opacity: 0;
-}
+/*.alert-dismissible.ng-enter {*/
+/*  opacity: 0;*/
+/*}*/
 
-.alert-dismissible.ng-enter-active {
-  opacity: 1;
-}
+/*.alert-dismissible.ng-enter-active {*/
+/*  opacity: 1;*/
+/*}*/
 
-.my-special-animation.ng-enter {
-  -webkit-animation:0.5s red-to-blue;
-  animation:0.5s red-to-blue;
-}
+/*.my-special-animation.ng-enter {*/
+/*  -webkit-animation:0.5s red-to-blue;*/
+/*  animation:0.5s red-to-blue;*/
+/*}*/
 
-@keyframes red-to-blue {
-  from { background:red; }
-  to { background:blue; }
-}
+/*@keyframes red-to-blue {*/
+/*  from { background:red; }*/
+/*  to { background:blue; }*/
+/*}*/
 
-@-webkit-keyframes red-to-blue {
-  from { background:red; }
-  to { background:blue; }
-}
+/*@-webkit-keyframes red-to-blue {*/
+/*  from { background:red; }*/
+/*  to { background:blue; }*/
+/*}*/

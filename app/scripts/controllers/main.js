@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('workspaceApp')
+angular.module('workspaceApp', ['ngAnimate'])
     .controller('MainCtrl', function ($scope, $http) {
         $scope.queries = function(tag){
             var url = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent';
