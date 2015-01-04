@@ -3,10 +3,10 @@
 angular.module('workspaceApp') // <- Inject ['ngAnimate'] here instead of doint it in app.js'
     .controller('MainCtrl', function ($scope, $http) {
         $scope.queries = function(tag){
-            var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent";
+            var url = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent';
             var request = {
-                client_id: "f2cbd0eb30e44f3a97ac27a001bcd2f8",
-                callback: "JSON_CALLBACK" 
+                client_id: 'f2cbd0eb30e44f3a97ac27a001bcd2f8',
+                callback: 'JSON_CALLBACK' 
             };
 
             $http({
@@ -28,14 +28,14 @@ angular.module('workspaceApp') // <- Inject ['ngAnimate'] here instead of doint 
         };
         
         $scope.statuses = {error: false, searching: false, done: false, show: false};
-        $scope.tag = "";
+        $scope.tag = '';
         $scope.search = function(tag) {
             $scope.statuses.done = false;
             $scope.statuses.error = false;
             if($scope.instaSearch.$valid) {
                 $scope.statuses.show = false;
                 $scope.master= angular.copy(tag);
-                $scope.tag="";
+                $scope.tag='';
                 $scope.statuses.searching = true;
                 $scope.queries(tag);
             }
