@@ -10,7 +10,7 @@
  */
 angular
   .module('workspaceApp', [
-    // 'ngAnimate',
+    'ngAnimate',
     'ngMessages',
     'ngResource',
     'ngRoute'
