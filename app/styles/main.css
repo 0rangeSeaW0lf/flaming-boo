@@ -15,17 +15,17 @@ body {
 /*  opacity: 1;*/
 /*}*/
 
-/*.my-special-animation.ng-enter {*/
-/*  -webkit-animation:0.5s red-to-blue;*/
-/*  animation:0.5s red-to-blue;*/
-/*}*/
+.my-special-animation.ng-enter {
+  -webkit-animation: 3s red-to-blue;
+  animation: 3s red-to-blue;
+}
 
-/*@keyframes red-to-blue {*/
-/*  from { background:red; }*/
-/*  to { background:blue; }*/
-/*}*/
+@keyframes red-to-blue {
+  from { background-color: red; }
+  to { background-color: blue; }
+}
 
-/*@-webkit-keyframes red-to-blue {*/
-/*  from { background:red; }*/
-/*  to { background:blue; }*/
-/*}*/
+@-webkit-keyframes red-to-blue {
+  from { background-color: red; }
+  to { background-color: blue; }
+}
