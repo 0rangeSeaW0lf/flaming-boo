@@ -15,30 +15,34 @@ angular.module('workspaceApp')
                 params: request
             }).
             success(function(result) {
-                $scope.pictures = result.data;
-                $scope.searching = false;
-                $scope.done = true;
-                console.log($scope.pictures);
+                $scope.pictures = result;
+                $scope.statuses.searching = false;
+                $scope.statuses.done = true;
+                $scope.statuses.show = true;
+                console.log(result);
             }).
             error(function() {
-                $scope.alert(error);
-                $scope.searching = false;
-                $scope.done = false;
+                $scope.statuses.searching = false;
+                $scope.statuses.done = false;
+                $scope.statuses.error = true;
             });
         };
         
-        $scope.error = false;
-        $scope.searching = false;
-        $scope.done = false;
+        $scope.statuses = {error: false, searching: false, done: false, show: false};
         $scope.tag = "";
         $scope.search = function(tag) {
-            $scope.done = false;
-            $scope.error = false;
+            $scope.statuses.done = false;
+            $scope.statuses.error = false;
             if($scope.instaSearch.$valid) {
-               $scope.master= angular.copy(tag);
-               $scope.tag="";
-               $scope.searching = true;
-               $scope.queries(tag);
+                $scope.statuses.show = false;
+                $scope.master= angular.copy(tag);
+                $scope.tag="";
+                $scope.statuses.searching = true;
+                $scope.queries(tag);
             }
+        };
+        $scope.change = function(status){
+            $scope.statuses[status] = false;
+            console.log($scope.statuses);
         };
     });
