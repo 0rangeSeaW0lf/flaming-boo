@@ -1,4 +1,5 @@
-<div class="col-xs-10 col-xs-offset-1 text-center box">
+<div class="col-xs-10 col-xs-offset-1 text-center">
+  <div class="box">
   <img src="images/ng-instagram.png" alt="Instagram Searcher">
   <br /><br /><br />
   <div class="row">
@@ -26,7 +27,8 @@
         <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </div>
       <div class="row queries" ng-if="statuses.show">
-        <div ng-repeat="picture in pictures.data">
+        <div class="col-xs-10 col-xs-offset-1">
+        <div ng-repeat="picture in pictures.data" class="repeated-item">
           <div class="col-xs-12 col-sm-6 col-md-4">
             <a href="{{ picture.link }}" target="_blank">
               <img ng-src="{{ picture.images.standard_resolution.url }}" class="img-responsice" height="100%" width="100%"></img>
@@ -34,8 +36,9 @@
             <br /><br /><br />
           </div>
         </div>
+        </div>
       </div>
     </div>
   </div>
-  <div></div>
+  </div>
 </div>

@@ -1,11 +1,23 @@
 /* Space out content a bit */
-body {
+html, body {
   background-color: black;
+  height:100%;
+}
+
+.container, .row {
+  height: 100%;
 }
 
 .box {
-  background-color: white;
   padding-top: 100px;
-  min-height: 100%;
-  height: auto;
+  background-color: white;
+  min-height:100%;
+}
+
+.alert-dismissible.ng-enter {
+  opacity: 0;
+}
+
+.alert-dismissible.ng-enter-active {
+  opacity: 1;
 }

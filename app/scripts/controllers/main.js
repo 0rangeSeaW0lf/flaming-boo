@@ -19,7 +19,6 @@ angular.module('workspaceApp')
                 $scope.statuses.searching = false;
                 $scope.statuses.done = true;
                 $scope.statuses.show = true;
-                console.log(result);
             }).
             error(function() {
                 $scope.statuses.searching = false;
@@ -42,7 +41,6 @@ angular.module('workspaceApp')
             }
         };
         $scope.change = function(status){
-            $scope.statuses[status] = false;
-            console.log($scope.statuses);
+            $scope.statuses[status] = !$scope.statuses[status];
         };
     });
