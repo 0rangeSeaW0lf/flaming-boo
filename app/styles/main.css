@@ -1,17 +1,10 @@
-/* Space out content a bit */
-html, body {
+body {
   background-color: black;
-  height:100%;
 }
-
-.container, .row {
-  height: 100%;
-}
-
 .box {
   padding-top: 100px;
   background-color: white;
-  min-height:100%;
+  min-height: 100vh;
 }
 
 .alert-dismissible.ng-enter {
@@ -20,4 +13,17 @@ html, body {
 
 .alert-dismissible.ng-enter-active {
   opacity: 1;
+}
+
+.repeated-item.ng-enter, .repeated-item.ng-move {
+  -webkit-transition:  1s linear all;
+  -moz-transition: 1s linear all;
+  -o-transition: 1s linear all;
+  transition: 1s linear all;
+  opacity:0;
+}
+
+.repeated-item.ng-enter.ng-enter-active,
+.repeated-item.ng-move.ng-move-active {
+  opacity:1;
 }
